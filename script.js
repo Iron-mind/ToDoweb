@@ -66,10 +66,18 @@ function displayToDos() {
 
 function addToDo() {
   // Tu código acá:
-  var newTodo = new ToDo(document.getElementById("toDoInput").value)
-  toDoItems.push(newTodo)
-  document.getElementById("toDoInput").value = ""
-  displayToDos()
+  if (document.getElementById("toDoInput").value=="") {
+    displayToDos()
+
+  }
+  else {
+    var newTodo = new ToDo(document.getElementById("toDoInput").value)
+    toDoItems.push(newTodo)
+    document.getElementById("toDoInput").value = ""
+    displayToDos()
+
+  }
+
 
 }
 
